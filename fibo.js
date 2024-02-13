@@ -23,10 +23,12 @@ function fibonacciMemo(n) {
   // return
   if (n in memo) return memo[n];
   // base cases
-  if (num === 0) return 0;
-  if (num === 1) return 1;
+  if (n === 0) return 0;
+  if (n === 1) return 1;
   // recursion
   // store result in memo
   memo[n] = fibonacciMemo(n - 1) + fibonacciMemo(n - 2);
   return memo[n];
 }
+
+console.log(fibonacciMemo(7));
